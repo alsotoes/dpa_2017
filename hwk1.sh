@@ -2,7 +2,7 @@
 
 #   This downloads all needed files, 
 #   CMD: Downloads, count and disk usage in one line
-#seq -f "%02g" 1 31 | parallel wget http://data.gdeltproject.org/events/201612{}.export.CSV.zip &>/dev/null ; ls -l *.zip | wc -l ; du -h .
+seq -f "%02g" 1 31 | parallel wget http://data.gdeltproject.org/events/201612{}.export.CSV.zip &>/dev/null ; ls -l *.zip | wc -l ; du -h .
 
 #   Processing the downloaded files putting the right headers in database
 #   CMD: Re-creates file names, in parallel unzip all files and search in Actor1CountryCode for /MEX/ and in EventCode for /MX/
