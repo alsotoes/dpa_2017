@@ -1,4 +1,6 @@
 #!/bin/bash
+# Alvaro Soto
+# alsotoesc@itam.mx
 
 for i in $(http http://swapi.co/api/ | jq 'keys[] as $k | "\($k)"' | sed "s/\"//g"); do \
 URL="http://swapi.co/api/"${i}"/"?page=1 ;\
